@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pondok Pesantren Ainul Hasan</title>
-    <meta name="description" content="Website Resmi Pondok Pesantren Ainul Hasan. Mencetak Generasi Qur'ani, Berakhlak Mulia, dan Berprestasi dengan mengintegrasikan ilmu agama, formal, dan ekstrakurikuler Pagar Nusa.">
+    <title>Pondok Pesantren Ainul Hasan - Official Website & Portal PMB Online</title>
+    <meta name="description" content="Website Resmi Pondok Pesantren Ainul Hasan. Mencetak Generasi Qur'ani, Berakhlak Mulia, dan Berprestasi dengan mengintegrasikan ilmu agama, formal, dan pencak silat Pagar Nusa. PMB Online Terbuka!">
     
     <!-- Google Fonts: Poppins (Heading) & Inter (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +25,7 @@
             --primary-tint: #ECFDF5;   /* Emerald Background Soft */
             --gold: #D4AF37;           /* Emas Premium */
             --gold-hover: #B89020;     /* Emas Hover */
+            --gold-light: #FEF3C7;     /* Emas Soft */
             --white: #FFFFFF;
             --bg-light: #F8FAFC;      /* Abu-abu Muda */
             --text-dark: #0F172A;     /* Dark Slate Text */
@@ -97,7 +98,7 @@
         /* Section Title Header */
         .section-title {
             text-align: center;
-            max-width: 750px;
+            max-width: 780px;
             margin: 0 auto 3.5rem auto;
         }
 
@@ -167,6 +168,7 @@
             background-color: var(--gold);
             color: #111827;
             box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
+            font-weight: 700;
         }
 
         .btn-gold:hover {
@@ -178,7 +180,7 @@
         .btn-outline {
             background-color: transparent;
             color: var(--white);
-            border: 2px solid rgba(255, 255, 255, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.7);
         }
 
         .btn-outline:hover {
@@ -188,26 +190,50 @@
             transform: translateY(-2px);
         }
 
-        /* Ripple Animation Effect */
-        .ripple {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-            transform: scale(0);
-            animation: ripple-effect 0.6s linear;
-            pointer-events: none;
+        .btn-outline-primary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
         }
 
-        @keyframes ripple-effect {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: translateY(-2px);
         }
 
-        /* ==========================================================================
-           PRELOADER
-           ========================================================================== */
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+        }
+
+        /* Top Bar Contact Header */
+        .top-bar {
+            background-color: #063A36;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.825rem;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-info {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .top-info item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* PRELOADER */
         #preloader {
             position: fixed;
             top: 0;
@@ -238,6 +264,8 @@
             justify-content: center;
             font-size: 2.2rem;
             color: var(--primary-dark);
+            font-family: var(--font-heading);
+            font-weight: 800;
             margin-bottom: 1.5rem;
             box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
             animation: pulse-logo 1.8s infinite ease-in-out;
@@ -256,9 +284,7 @@
             font-weight: 600;
         }
 
-        /* ==========================================================================
-           HEADER & NAVBAR
-           ========================================================================== */
+        /* HEADER & NAVBAR */
         .header {
             position: fixed;
             top: 0;
@@ -269,16 +295,16 @@
         }
 
         .header.scrolled {
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             box-shadow: var(--shadow-md);
-            padding: 0.5rem 0;
+            padding: 0.6rem 0;
         }
 
         .header:not(.scrolled) {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
-            padding: 1.2rem 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.85), transparent);
+            padding: 1rem 0;
         }
 
         .navbar-container {
@@ -294,8 +320,8 @@
         }
 
         .logo-icon {
-            width: 46px;
-            height: 46px;
+            width: 48px;
+            height: 48px;
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             border: 2px solid var(--gold);
             border-radius: 50%;
@@ -303,13 +329,15 @@
             align-items: center;
             justify-content: center;
             color: var(--gold);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
 
         .logo-text h1 {
             font-family: var(--font-heading);
-            font-size: 1.15rem;
-            font-weight: 700;
+            font-size: 1.2rem;
+            font-weight: 800;
             line-height: 1.1;
+            letter-spacing: 0.5px;
             transition: var(--transition);
         }
 
@@ -323,16 +351,16 @@
 
         .logo-text span {
             font-size: 0.75rem;
-            font-weight: 500;
+            font-weight: 600;
             color: var(--gold);
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             display: block;
         }
 
         .nav-menu {
             display: flex;
             align-items: center;
-            gap: 1.8rem;
+            gap: 1.6rem;
         }
 
         .nav-link {
@@ -343,7 +371,7 @@
         }
 
         .header:not(.scrolled) .nav-link {
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.92);
         }
 
         .header.scrolled .nav-link {
@@ -371,7 +399,28 @@
             font-weight: 600;
         }
 
-        /* Hamburger Button */
+        .pmb-nav-btn {
+            position: relative;
+        }
+
+        .pmb-badge-nav {
+            position: absolute;
+            top: -10px;
+            right: -12px;
+            background: #EF4444;
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 2px 6px;
+            border-radius: 20px;
+            animation: pulse-red 2s infinite;
+        }
+
+        @keyframes pulse-red {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
         .hamburger {
             display: none;
             background: none;
@@ -385,17 +434,15 @@
             color: var(--primary-dark);
         }
 
-        /* ==========================================================================
-           HERO SECTION
-           ========================================================================== */
+        /* HERO SECTION */
         .hero {
             min-height: 100vh;
             position: relative;
-            background: linear-gradient(135deg, rgba(9, 56, 52, 0.88) 0%, rgba(15, 118, 110, 0.75) 100%),
+            background: linear-gradient(135deg, rgba(9, 56, 52, 0.9) 0%, rgba(15, 118, 110, 0.8) 100%),
                         url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             display: flex;
             align-items: center;
-            padding-top: 6rem;
+            padding-top: 7rem;
             padding-bottom: 4rem;
             color: var(--white);
         }
@@ -412,7 +459,7 @@
         }
 
         .hero-content {
-            max-width: 820px;
+            max-width: 860px;
             margin: 0 auto;
             text-align: center;
             position: relative;
@@ -436,7 +483,7 @@
 
         .hero h1 {
             font-family: var(--font-heading);
-            font-size: 3rem;
+            font-size: 3.1rem;
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 1.25rem;
@@ -448,11 +495,11 @@
         }
 
         .hero p {
-            font-size: 1.125rem;
+            font-size: 1.15rem;
             line-height: 1.7;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.92);
             margin-bottom: 2.2rem;
-            max-width: 720px;
+            max-width: 740px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -466,17 +513,16 @@
             margin-bottom: 4rem;
         }
 
-        /* Stats Counter Box */
         .hero-stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.12);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             padding: 1.8rem 2rem;
             border-radius: var(--radius-lg);
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
 
@@ -498,13 +544,11 @@
 
         .stat-label {
             font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.85);
+            color: rgba(255, 255, 255, 0.9);
             font-weight: 500;
         }
 
-        /* ==========================================================================
-           TENTANG PONDOK (ABOUT)
-           ========================================================================== */
+        /* TENTANG PONDOK (PROFIL) */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -626,9 +670,7 @@
             margin-top: 0.2rem;
         }
 
-        /* ==========================================================================
-           PROGRAM PENDIDIKAN
-           ========================================================================== */
+        /* PROGRAM PENDIDIKAN */
         .program-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -701,9 +743,7 @@
             line-height: 1.6;
         }
 
-        /* ==========================================================================
-           PROGRAM UNGGULAN (PAGAR NUSA)
-           ========================================================================== */
+        /* PAGAR NUSA SECTION */
         .featured-wrapper {
             background: linear-gradient(135deg, #064E3B 0%, #0F766E 100%);
             border-radius: var(--radius-lg);
@@ -713,16 +753,6 @@
             position: relative;
             overflow: hidden;
             border: 2px solid var(--gold);
-        }
-
-        .featured-wrapper::after {
-            content: '🥋';
-            position: absolute;
-            right: -20px;
-            bottom: -30px;
-            font-size: 15rem;
-            opacity: 0.06;
-            pointer-events: none;
         }
 
         .featured-grid {
@@ -805,44 +835,109 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* Secondary Featured Programs Row */
-        .secondary-featured {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.25rem;
-            margin-top: 2.5rem;
+        /* PMB SECTION SPECIFIC STYLES */
+        .pmb-section {
+            background: linear-gradient(to bottom, #F1F5F9, #E2E8F0);
+            position: relative;
         }
 
-        .sec-card {
+        .pmb-card-banner {
+            background: linear-gradient(135deg, #0D5E58 0%, #0F766E 100%);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            color: var(--white);
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--gold);
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pmb-banner-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .pmb-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .pmb-tabs-container {
             background: var(--white);
-            padding: 1.25rem;
-            border-radius: var(--radius-md);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
             border: 1px solid var(--border);
-            text-align: center;
+            padding: 2.5rem;
+        }
+
+        .pmb-nav-tabs {
+            display: flex;
+            gap: 1rem;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 2rem;
+            overflow-x: auto;
+        }
+
+        .pmb-tab-btn {
+            padding: 0.8rem 1.5rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: transparent;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             transition: var(--transition);
         }
 
-        .sec-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .sec-card i {
-            font-size: 1.8rem;
+        .pmb-tab-btn.active {
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            border-bottom-color: var(--primary);
         }
 
-        .sec-card h4 {
+        .pmb-tab-content {
+            display: none;
+        }
+
+        .pmb-tab-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        /* Fee Calculator & Estimasi Table */
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .fee-table th, .fee-table td {
+            padding: 0.85rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .fee-table th {
+            background: var(--primary-tint);
+            color: var(--primary-dark);
             font-family: var(--font-heading);
-            font-size: 1rem;
-            color: var(--text-dark);
+            font-weight: 600;
         }
 
-        /* ==========================================================================
-           PRESTASI SANTRI
-           ========================================================================== */
+        .fee-total {
+            background: #FEF3C7;
+            font-weight: 700;
+            color: #92400E;
+        }
+
+        /* PRESTASI SANTRI */
         .achievement-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -903,9 +998,7 @@
             font-size: 0.875rem;
         }
 
-        /* ==========================================================================
-           FASILITAS
-           ========================================================================== */
+        /* FASILITAS */
         .facility-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -918,7 +1011,6 @@
             overflow: hidden;
             height: 240px;
             box-shadow: var(--shadow-sm);
-            group: hover;
         }
 
         .facility-card img {
@@ -960,9 +1052,7 @@
             color: rgba(255, 255, 255, 0.85);
         }
 
-        /* ==========================================================================
-           GALERI & LIGHTBOX
-           ========================================================================== */
+        /* GALERI */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -1064,253 +1154,9 @@
             cursor: pointer;
         }
 
-        /* ==========================================================================
-           BERITA & ARTIKEL
-           ========================================================================== */
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .news-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .news-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .news-img {
-            height: 200px;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .news-body {
-            padding: 1.75rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .news-meta {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-bottom: 0.75rem;
-        }
-
-        .news-meta span {
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .news-title {
-            font-family: var(--font-heading);
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.75rem;
-            line-height: 1.4;
-        }
-
-        .news-excerpt {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .news-link {
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .news-link:hover {
-            color: var(--primary-dark);
-            gap: 0.6rem;
-        }
-
-        /* ==========================================================================
-           PPDB SECTION
-           ========================================================================== */
-        .ppdb-box {
-            background: linear-gradient(to right, #0F766E, #0D5E58);
-            border-radius: var(--radius-lg);
-            padding: 3.5rem 3rem;
-            color: var(--white);
-            box-shadow: var(--shadow-lg);
-            border: 2px solid var(--gold);
-        }
-
-        .ppdb-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .ppdb-info h3 {
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--gold);
-        }
-
-        .ppdb-info p {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-
-        .ppdb-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-        }
-
-        .ppdb-step-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            background: rgba(255, 255, 255, 0.08);
-            padding: 1rem;
-            border-radius: var(--radius-md);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-        }
-
-        .step-number {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: var(--gold);
-            color: #0F172A;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .step-text h4 {
-            font-family: var(--font-heading);
-            font-size: 1rem;
-            margin-bottom: 0.2rem;
-            color: var(--white);
-        }
-
-        .step-text p {
-            font-size: 0.85rem;
-            margin-bottom: 0;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        /* ==========================================================================
-           TESTIMONI SLIDER
-           ========================================================================== */
-        .testimonial-slider {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            overflow: hidden;
-            padding: 1rem 0 3rem 0;
-        }
-
-        .testimonial-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .testimonial-card {
-            min-width: 100%;
-            background: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-md);
-            text-align: center;
-        }
-
-        .testimonial-quote {
-            font-size: 1.1rem;
-            color: var(--text-dark);
-            font-style: italic;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .testimonial-user {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .user-avatar {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--gold);
-        }
-
-        .user-info h4 {
-            font-family: var(--font-heading);
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--primary-dark);
-            text-align: left;
-        }
-
-        .user-info p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-align: left;
-        }
-
-        .slider-dots {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--border);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .dot.active {
-            background: var(--primary);
-            width: 28px;
-            border-radius: 10px;
-        }
-
-        /* ==========================================================================
-           FAQ ACCORDION
-           ========================================================================== */
+        /* FAQ ACCORDION */
         .faq-accordion {
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -1367,9 +1213,7 @@
             line-height: 1.6;
         }
 
-        /* ==========================================================================
-           KONTAK SECTION
-           ========================================================================== */
+        /* KONTAK SECTION */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
@@ -1443,7 +1287,6 @@
             border: none;
         }
 
-        /* Contact Form */
         .contact-form-box {
             background: var(--white);
             padding: 2.5rem;
@@ -1492,9 +1335,7 @@
             min-height: 120px;
         }
 
-        /* ==========================================================================
-           FOOTER
-           ========================================================================== */
+        /* FOOTER */
         .footer {
             background: #063A36;
             color: var(--white);
@@ -1602,9 +1443,7 @@
             transform: translateY(-4px);
         }
 
-        /* ==========================================================================
-           MODALS (Pagar Nusa & PPDB Form)
-           ========================================================================== */
+        /* MODALS */
         .modal {
             position: fixed;
             inset: 0;
@@ -1627,11 +1466,11 @@
         .modal-card {
             background: var(--white);
             border-radius: var(--radius-lg);
-            max-width: 650px;
+            max-width: 700px;
             width: 100%;
             max-height: 90vh;
             overflow-y: auto;
-            padding: 2rem;
+            padding: 2.2rem;
             position: relative;
             transform: translateY(20px);
             transition: var(--transition);
@@ -1656,6 +1495,18 @@
             color: var(--text-dark);
         }
 
+        .modal-header {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+
+        .modal-header h3 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--primary-dark);
+        }
+
         /* Toast Notification */
         .toast {
             position: fixed;
@@ -1673,53 +1524,23 @@
             font-size: 0.95rem;
             transition: transform 0.4s ease;
             pointer-events: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
         }
 
         .toast.show {
             transform: translateX(-50%) translateY(0);
         }
 
-        /* ==========================================================================
-           ANIMATION CLASSES (Intersection Observer)
-           ========================================================================== */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-
-        .fade-left {
-            opacity: 0;
-            transform: translateX(-40px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-
-        .fade-right {
-            opacity: 0;
-            transform: translateX(40px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-
-        .zoom-in {
-            opacity: 0;
-            transform: scale(0.9);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-
-        .appear {
-            opacity: 1;
-            transform: translate(0) scale(1);
-        }
-
-        /* ==========================================================================
-           RESPONSIVE MEDIA QUERIES
-           ========================================================================== */
+        /* RESPONSIVE MEDIA QUERIES */
         @media (max-width: 992px) {
             .hero h1 { font-size: 2.4rem; }
             .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
-            .about-grid, .featured-grid, .ppdb-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .about-grid, .featured-grid, .pmb-banner-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
             .about-img-badge { right: 10px; bottom: -10px; }
             .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+            .top-bar { display: none; }
         }
 
         @media (max-width: 768px) {
@@ -1753,9 +1574,8 @@
             .hero h1 { font-size: 2rem; }
             .hero p { font-size: 0.975rem; }
             .section-title h2 { font-size: 1.75rem; }
-            .featured-wrapper { padding: 2rem 1.5rem; }
+            .featured-wrapper, .pmb-card-banner, .pmb-tabs-container { padding: 1.75rem 1.25rem; }
             .featured-list { grid-template-columns: 1fr; }
-            .ppdb-box { padding: 2rem 1.5rem; }
             .footer-grid { grid-template-columns: 1fr; }
         }
 
@@ -1774,6 +1594,19 @@
         <div class="loader-text">PONDOK PESANTREN AINUL HASAN</div>
     </div>
 
+    <!-- TOP INFORMATIONAL BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i data-lucide="map-pin" style="width:14px; display:inline;"></i> Jl. Raya Pesantren No. 45, Kebonagung, Jawa Timur</span>
+                <span><i data-lucide="phone" style="width:14px; display:inline;"></i> +62 812-3456-7890</span>
+            </div>
+            <div class="top-info">
+                <span><i data-lucide="mail" style="width:14px; display:inline;"></i> info@ainulhasan.sch.id</span>
+            </div>
+        </div>
+    </div>
+
     <!-- HEADER / NAVBAR -->
     <header class="header" id="navbar">
         <div class="container navbar-container">
@@ -1782,111 +1615,125 @@
                     <i data-lucide="book-open"></i>
                 </div>
                 <div class="logo-text">
-                    <h1>AINULsjdbsjdgsudf</h1>
+                    <!-- FIXED TYPO: "AINUL HASAN" -->
+                    <h1>AINUL HASAN</h1>
                     <span>PONDOK PESANTREN</span>
                 </div>
             </a>
+
+            <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
 
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#beranda" class="nav-link active">Beranda</a></li>
                 <li><a href="#profil" class="nav-link">Profil</a></li>
                 <li><a href="#program" class="nav-link">Program</a></li>
                 <li><a href="#pagar-nusa" class="nav-link">Pagar Nusa</a></li>
+                <li class="pmb-nav-btn">
+                    <a href="#pmb" class="nav-link">PMB 2026/2027 <span class="pmb-badge-nav">BUKA</span></a>
+                </li>
+                <li><a href="#prestasi" class="nav-link">Prestasi</a></li>
                 <li><a href="#fasilitas" class="nav-link">Fasilitas</a></li>
                 <li><a href="#galeri" class="nav-link">Galeri</a></li>
-                <li><a href="#berita" class="nav-link">Berita</a></li>
-                <li><a href="#ppdb" class="nav-link">PPDB</a></li>
                 <li><a href="#kontak" class="nav-link">Kontak</a></li>
+                <li><button class="btn btn-gold btn-sm" onclick="openPmbModal()">Daftar PMB</button></li>
             </ul>
-
-            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
-                <i data-lucide="menu"></i>
-            </button>
         </div>
     </header>
 
     <!-- HERO SECTION -->
     <section class="hero" id="beranda">
         <div class="container">
-            <div class="hero-content fade-up">
+            <div class="hero-content">
                 <div class="hero-badge">
-                    <i data-lucide="sparkles"></i> Penerimaan Santri Baru T.A. 2026/2027 Telah Dibuka
+                    <i data-lucide="sparkles"></i> Penerimaan Santri Baru (PMB) T.A. 2026/2027 Telah Dibuka!
                 </div>
-                <h1>Mencetak Generasi <span>Qur'ani</span>, Berakhlak Mulia, & Berprestasi</h1>
-                <p>Pondok Pesantren Ainul Hasan merupakan lembaga pendidikan Islam yang mengintegrasikan ilmu agama, pendidikan formal, pembinaan karakter, dan keterampilan untuk membentuk generasi muslim yang unggul.</p>
+                <h1>Mencetak Generasi <span>Qur'ani</span>, Berakhlak Mulia & Berprestasi</h1>
+                <p>Pondok Pesantren Ainul Hasan mengintegrasikan pendidikan Salafiyah, Tahfidh Al-Qur'an, Kurikulum Formal Terpadu, serta Pembentukan Karakter Mandiri & Bela Diri Pagar Nusa.</p>
                 <div class="hero-buttons">
-                    <a href="#ppdb" class="btn btn-gold"><i data-lucide="user-plus"></i> Daftar Santri Baru</a>
-                    <a href="#profil" class="btn btn-outline"><i data-lucide="compass"></i> Profil Pondok</a>
+                    <button class="btn btn-gold" onclick="openPmbModal()">
+                        <i data-lucide="user-plus"></i> Daftar Santri Baru Online
+                    </button>
+                    <a href="#profil" class="btn btn-outline">
+                        <i data-lucide="compass"></i> Jelajahi Pesantren
+                    </a>
+                    <button class="btn btn-outline" onclick="openStatusModal()">
+                        <i data-lucide="search"></i> Cek Status PMB
+                    </button>
                 </div>
 
-                <!-- Stats Counter -->
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <div class="stat-number"><span class="counter" data-target="1000">0</span>+</div>
-                        <div class="stat-label">Santri Mukim</div>
+                        <div class="stat-number">1.200+</div>
+                        <div class="stat-label">Santri Aktif</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number"><span class="counter" data-target="60">0</span>+</div>
-                        <div class="stat-label">Ustadz & Pengajar</div>
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Lulusan Tahfidh</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number"><span class="counter" data-target="20">0</span></div>
-                        <div class="stat-label">Tahun Berdiri</div>
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Tenaga Pendidik / Asatidz</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number"><span class="counter" data-target="500">0</span>+</div>
-                        <div class="stat-label">Alumni Tersebar</div>
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Prestasi Nasional & Daerah</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TENTANG PONDOK SECTION -->
+    <!-- PROFIL PONDOK PESANTREN -->
     <section class="section-padding" id="profil">
         <div class="container">
-            <div class="section-title fade-up">
-                <div class="badge"><i data-lucide="info"></i> MENGENAL LEBIH DEKAT</div>
-                <h2>Tentang <span>Ainul Hasan</span></h2>
-                <p>Membina akhlak mulia dan kecerdasan intelektual berlandaskan Al-Qur'an dan As-Sunnah.</p>
+            <div class="section-title">
+                <div class="badge"><i data-lucide="bookmark"></i> Mengenal Kami</div>
+                <h2>Profil <span>Pondok Pesantren Ainul Hasan</span></h2>
+                <p>Berdiri teguh dalam membimbing keilmuan Islam, pembentukan karakter Qur'ani, serta ketrampilan hidup santri modern.</p>
             </div>
 
             <div class="about-grid">
-                <div class="about-img-wrapper fade-left">
-                    <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&q=80" alt="Gedung Pondok Pesantren Ainul Hasan" class="about-img-main" loading="lazy">
+                <div class="about-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=800&q=80" alt="Gedung Pondok Pesantren Ainul Hasan" class="about-img-main">
                     <div class="about-img-badge">
-                        <div class="number">20+</div>
-                        <div class="text">Tahun Pengabdian</div>
+                        <div class="number">25+</div>
+                        <div class="text">Tahun Mengabdi</div>
                     </div>
                 </div>
 
-                <div class="about-text fade-right">
-                    <h3>Pendidikan Pesantren Berbasis Karakter & Prestasi</h3>
-                    <p>Pondok Pesantren Ainul Hasan berdiri teguh melayani umat dengan memadukan kurikulum salafiyah klasik dan pendidikan formal modern. Kami berkomitmen menciptakan lingkungan belajar yang kondusif, islami, dan berwawasan global.</p>
-                    
+                <div class="about-text">
+                    <h3>Mendidik dengan Hati, Berpijak pada Al-Qur'an dan Sunnah</h3>
+                    <p>Pondok Pesantren Ainul Hasan adalah lembaga pendidikan Islam yang memadukan keunggulan ilmu keagamaan tradisional (Kitab Kuning), hafalan Al-Qur'an (Tahfidh), serta pendidikan formal berakreditasi. Didirikan dengan komitmen mencetak santri unggul yang kokoh akidahnya, santun akhlaknya, dan tangguh raganya.</p>
+
                     <div class="about-tabs">
-                        <button class="tab-btn active" onclick="openTab(event, 'tab-sejarah')">Sejarah</button>
-                        <button class="tab-btn" onclick="openTab(event, 'tab-visi')">Visi & Misi</button>
-                        <button class="tab-btn" onclick="openTab(event, 'tab-nilai')">Nilai Utama</button>
+                        <button class="tab-btn active" onclick="switchTab('visi')">Visi & Misi</button>
+                        <button class="tab-btn" onclick="switchTab('pengasuh')">Dewan Pengasuh</button>
+                        <button class="tab-btn" onclick="switchTab('keunggulan')">Keunggulan</button>
                     </div>
 
-                    <div id="tab-sejarah" class="tab-content active">
-                        <p>Didirikan pada tahun 2006, Ainul Hasan berkembang dari majelis taklim sederhana menjadi komplek pendidikan terpadu yang menampung ribuan santri dari berbagai pelosok nusantara.</p>
-                    </div>
-
-                    <div id="tab-visi" class="tab-content">
+                    <div id="tab-visi" class="tab-content active">
                         <ul>
-                            <li><i data-lucide="check-circle-2"></i> <strong>Visi:</strong> Menjadi pesantren unggulan dalam mencetak hafidz Qur'an berakhlak mulia dan menguasai teknologi.</li>
-                            <li><i data-lucide="check-circle-2"></i> <strong>Misi 1:</strong> Menyelenggarakan tahfidz Al-Qur'an bermutu tingi.</li>
-                            <li><i data-lucide="check-circle-2"></i> <strong>Misi 2:</strong> Mengembangkan bakat keatletan melalui pencak silat Pagar Nusa.</li>
+                            <li><i data-lucide="check-circle-2"></i> <strong>Visi:</strong> Menjadi pusat unggulan pendidikan Islam berkarakter Qur'ani, berakhlakul karimah, mandiri, dan berwawasan global.</li>
+                            <li><i data-lucide="check-circle-2"></i> <strong>Misi 1:</strong> Menyelenggarakan pembelajaran Al-Qur'an, Hadits, dan Kitab-Kitab Kuning secara terstruktur.</li>
+                            <li><i data-lucide="check-circle-2"></i> <strong>Misi 2:</strong> Mengintegrasikan pendidikan akhlak, akademik, dan kedisiplinan seni bela diri Pagar Nusa.</li>
                         </ul>
                     </div>
 
-                    <div id="tab-nilai" class="tab-content">
+                    <div id="tab-pengasuh" class="tab-content">
                         <ul>
-                            <li><i data-lucide="award"></i> <strong>Ikhlas:</strong> Mengabdi penuh ketulusan hati.</li>
-                            <li><i data-lucide="shield-check"></i> <strong>Adab:</strong> Mendahulukan adab sebelum menuntut ilmu.</li>
-                            <li><i data-lucide="zap"></i> <strong>Mandiri:</strong> Membentuk mentalitas santri yang tangguh.</li>
+                            <li><i data-lucide="user-check"></i> <strong>Pengasuh Utama:</strong> KH. Ahmad Hasan, M.Pd.I</li>
+                            <li><i data-lucide="award"></i> <strong>Ketua Yayasan:</strong> H. Muhammad Ainul Yaqin, S.H., M.H.</li>
+                            <li><i data-lucide="heart-handshake"></i> Dibimbing oleh jajaran Asatidz & Asatidzah lulusan Perguruan Tinggi Islam terkemuka dalam dan luar negeri.</li>
+                        </ul>
+                    </div>
+
+                    <div id="tab-keunggulan" class="tab-content">
+                        <ul>
+                            <li><i data-lucide="shield-check"></i> Pembinaan 24 jam dengan lingkungan asrama kondusif, islami, dan aman.</li>
+                            <li><i data-lucide="graduation-cap"></i> Ijazah ganda: Ijazah Formal Negara (SMP/MA) dan Ijazah Diniyah Pesantren.</li>
+                            <li><i data-lucide="swords"></i> Ekstrakurikuler Wajib/Unggulan Pencak Silat Pagar Nusa NU untuk fisik & mental santri.</li>
                         </ul>
                     </div>
                 </div>
@@ -1895,174 +1742,253 @@
     </section>
 
     <!-- PROGRAM PENDIDIKAN -->
-    <section class="section-padding" id="program" style="background: #F1F5F9;">
+    <section class="section-padding" id="program" style="background: var(--white);">
         <div class="container">
-            <div class="section-title fade-up">
-                <div class="badge"><i data-lucide="book"></i> KURIKULUM & PEMBINAAN</div>
-                <h2>Program <span>Pendidikan</span></h2>
-                <p>Kurikulum komprehensif dirancang untuk menyeimbangkan potensi spiritual, akademik, dan fisik santri.</p>
+            <div class="section-title">
+                <div class="badge"><i data-lucide="book-open"></i> Kurikulum & Pendidikan</div>
+                <h2>Program <span>Pendidikan Unggulan</span></h2>
+                <p>Pilihan jenjang studi komprehensif dari tingkat Diniyah hingga Formal untuk menjamin masa depan santri.</p>
             </div>
 
             <div class="program-grid">
-                <div class="program-card fade-up">
-                    <div class="program-icon"><i data-lucide="book-open"></i></div>
-                    <h3>Tahfidz Al-Qur'an</h3>
-                    <p>Program bimbingan intensif hafalan 30 Juz Al-Qur'an beserta tajwid dan tahsin bersanad.</p>
+                <div class="program-card">
+                    <div class="program-icon"><i data-lucide="book-marked"></i></div>
+                    <h3>Madrasah Diniyah (Madin)</h3>
+                    <p>Pembelajaran mendalam Kitab Kuning (Nahwu, Shorof, Fiqih, Aqidatul Awam, Hadits) metode sorogan dan bandongan.</p>
                 </div>
 
-                <div class="program-card fade-up">
-                    <div class="program-icon"><i data-lucide="scroll"></i></div>
-                    <h3>Madrasah Diniyah</h3>
-                    <p>Pendalaman fan ilmu syariah klasik, tauhid, fiqh, tasawuf, dan tarikh islam.</p>
+                <div class="program-card">
+                    <div class="program-icon"><i data-lucide="award"></i></div>
+                    <h3>Tahfidh Al-Qur'an 30 Juz</h3>
+                    <p>Program bimbingan setoran hafalan harian, muraja'ah terpadu, dan sertifikasi Sanad bagi santri yang mencapai target 30 juz.</p>
                 </div>
 
-                <div class="program-card fade-up">
+                <div class="program-card">
+                    <div class="program-icon"><i data-lucide="school"></i></div>
+                    <h3>SMP Ainul Hasan (Formal)</h3>
+                    <p>Sekolah Menengah Pertama berakreditasi A dengan integrasi ilmu pengetahuan umum, sains, teknologi, dan keagamaan.</p>
+                </div>
+
+                <div class="program-card">
                     <div class="program-icon"><i data-lucide="graduation-cap"></i></div>
-                    <h3>Pendidikan Formal</h3>
-                    <p>MTs dan MA Terakreditasi A dengan kurikulum nasional terpadu pesantren.</p>
-                </div>
-
-                <div class="program-card fade-up">
-                    <div class="program-icon"><i data-lucide="library"></i></div>
-                    <h3>Kajian Kitab Kuning</h3>
-                    <p>Metode pembelajaran sorogan dan bandongan langsung dibimbing para Masyayikh.</p>
-                </div>
-
-                <div class="program-card fade-up">
-                    <div class="program-icon"><i data-lucide="languages"></i></div>
-                    <h3>Bahasa Arab & Inggris</h3>
-                    <p>Pembiasaan percakapan harian (Muhadatsah), tata bahasa, dan public speaking 2 bahasa.</p>
-                </div>
-
-                <div class="program-card fade-up">
-                    <div class="program-icon"><i data-lucide="briefcase"></i></div>
-                    <h3>Kewirausahaan Santri</h3>
-                    <p>Pelatihan agrobisnis, manajemen tata boga, keterampilan teknis, dan bisnis digital.</p>
-                </div>
-
-                <div class="program-card fade-up">
-                    <div class="program-icon"><i data-lucide="heart"></i></div>
-                    <h3>Pembinaan Akhlak</h3>
-                    <p>Pembentukan mental disiplin, shalat berjamaah, wirid, serta rutinitas ibadah sunnah.</p>
-                </div>
-
-                <div class="program-card fade-up">
-                    <div class="program-icon"><i data-lucide="cpu"></i></div>
-                    <h3>Literasi Komputer & IT</h3>
-                    <p>Pengenalan teknologi informasi dasar, perkantoran, dan desain grafis untuk santri.</p>
+                    <h3>MA Ainul Hasan (Formal)</h3>
+                    <p>Madrasah Aliyah Jurusan IPA, IPS, & Keagamaan. Menyiapkan lulusan siap masuk PTN, PTIN, maupun Beasiswa Internasional.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROGRAM UNGGULAN (PAGAR NUSA) -->
+    <!-- PROGRAM UNGGULAN: PAGAR NUSA -->
     <section class="section-padding" id="pagar-nusa">
         <div class="container">
-            <div class="section-title fade-up">
-                <div class="badge"><i data-lucide="swords"></i> EKSTRAKURIKULER UNGGULAN</div>
-                <h2>Pencak Silat <span>Pagar Nusa</span></h2>
-                <p>Benteng Ulama dan Bangsa, menempa stamina fisik serta kecintaan pada tanah air.</p>
-            </div>
-
-            <div class="featured-wrapper fade-up">
+            <div class="featured-wrapper">
                 <div class="featured-grid">
                     <div class="featured-content">
-                        <div class="featured-badge"><i data-lucide="trophy"></i> Ekstrakurikuler Wajib & Utama</div>
-                        <h3>🥋 Pagar Nusa Ainul Hasan</h3>
-                        <p>Pagar Nusa Pondok Pesantren Ainul Hasan tidak hanya mengajarkan keatletan fisik dan seni bela diri tradisional, tetapi juga menggembleng mental keislaman, adab tawadhu', serta ketakwaan kepada Allah SWT.</p>
-                        
+                        <div class="featured-badge"><i data-lucide="shield"></i> Ekstrakurikuler Unggulan Wajib</div>
+                        <h3>Pencak Silat Pagar Nusa NU</h3>
+                        <p>Di Pondok Pesantren Ainul Hasan, seni bela diri Pagar Nusa ditanamkan bukan sekadar olahraga, melainkan sarana melatih jiwa satria, kedisiplinan, tawadhu', dan kewajiban membela kyai serta NKRI.</p>
+
                         <div class="featured-list">
                             <div class="featured-item">
-                                <h4><i data-lucide="clock"></i> Jadwal Latihan</h4>
-                                <p>Selasa & Jumat Sore (15.30 - 17.00 WIB)</p>
+                                <h4><i data-lucide="check"></i> Olah Rasa & Batin</h4>
+                                <p>Latihan spiritual pernafasan, doa harian, dan akhlakul karimah.</p>
                             </div>
                             <div class="featured-item">
-                                <h4><i data-lucide="award"></i> Prestasi Utama</h4>
-                                <p>Juara Umum Kejurda Silat NU 2025</p>
+                                <h4><i data-lucide="check"></i> Prestasi Kejuaraan</h4>
+                                <p>Rutin menjuarai Turnamen Pencak Silat tingkat Kabupaten, Provinsi, dan Nasional.</p>
                             </div>
                             <div class="featured-item">
-                                <h4><i data-lucide="user-check"></i> Pelatih</h4>
-                                <p>Pendekar Bersertifikat Nasional</p>
+                                <h4><i data-lucide="check"></i> Pelatih Berlisensi</h4>
+                                <p>Dibimbing langsung oleh Guru Besar Pagar Nusa dan pelatih nasional.</p>
                             </div>
                             <div class="featured-item">
-                                <h4><i data-lucide="shield"></i> Materi</h4>
-                                <p>Jurus Wajib, Seni, Sambung & Olah Jiwa</p>
+                                <h4><i data-lucide="check"></i> Sertifikasi Kenaikan Sabuk</h4>
+                                <p>Ujian kenaikan tingkat berkala dengan piagam resmi IPSI & Pagar Nusa.</p>
                             </div>
                         </div>
 
-                        <button class="btn btn-gold" onclick="openPagarNusaModal()">
-                            <i data-lucide="eye"></i> Lihat Selengkapnya Pagar Nusa
+                        <button class="btn btn-gold" onclick="openPagarNusaInfo()">
+                            <i data-lucide="info"></i> Detail Program Pagar Nusa
                         </button>
                     </div>
 
                     <div class="featured-img-container">
-                        <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=800&q=80" alt="Latihan Pencak Silat Pagar Nusa" class="featured-img" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Latihan Pagar Nusa Santri" class="featured-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTAL PMB ONLINE (PENERIMAAN SANTRI BARU) -->
+    <section class="section-padding pmb-section" id="pmb">
+        <div class="container">
+            <div class="section-title">
+                <div class="badge"><i data-lucide="user-plus"></i> PMB Online T.A. 2026/2027</div>
+                <h2>Penerimaan <span>Santri Baru (PMB)</span></h2>
+                <p>Mari bergabung menjadi bagian dari keluarga besar Pondok Pesantren Ainul Hasan. Dapatkan fasilitas pendidikan islami terbaik.</p>
+            </div>
+
+            <!-- BANNER UTAMA PMB -->
+            <div class="pmb-card-banner">
+                <div class="pmb-banner-grid">
+                    <div>
+                        <span style="background: var(--gold); color: #000; padding: 0.3rem 0.8rem; border-radius:20px; font-weight:700; font-size:0.8rem;">GELOMBANG 1 DIBUKA</span>
+                        <h3 style="font-family: var(--font-heading); font-size: 2rem; margin-top: 0.5rem; margin-bottom: 0.8rem;">Segera Daftarkan Putra/Putri Anda!</h3>
+                        <p style="opacity: 0.95; font-size: 0.95rem;">Nikmati potongan keringanan biaya infaq pembangunan untuk 50 pendaftar pertama Gelombang 1. Kuota terbatas tiap jenjang studi.</p>
+                        <div class="pmb-actions">
+                            <button class="btn btn-gold" onclick="openPmbModal()">
+                                <i data-lucide="edit-3"></i> Isi Formulir Pendaftaran Online
+                            </button>
+                            <button class="btn btn-outline" onclick="openStatusModal()">
+                                <i data-lucide="search"></i> Cek Status Pendaftaran / Kelulusan
+                            </button>
+                        </div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: var(--radius-md); border: 1px dashed var(--gold);">
+                        <h4 style="color: var(--gold); font-family: var(--font-heading); margin-bottom: 0.75rem;"><i data-lucide="calendar"></i> Jadwal PMB 2026/2027</h4>
+                        <ul style="font-size: 0.875rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                            <li><strong>Gelombang I:</strong> 1 Jan - 31 Maret 2026</li>
+                            <li><strong>Gelombang II:</strong> 1 April - 30 Juni 2026</li>
+                            <li><strong>Tes Seleksi & Wawancara:</strong> Setiap Hari Sabtu</li>
+                            <li><strong>Masuk Asrama:</strong> 12 Juli 2026</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Program Unggulan Lainnya -->
-            <div class="secondary-featured fade-up">
-                <div class="sec-card">
-                    <i data-lucide="mic"></i>
-                    <h4>Muhadhoroh 3 Bahasa</h4>
+            <!-- TABS DETAIL PMB: ALUR, BIAYA, SYARAT -->
+            <div class="pmb-tabs-container">
+                <div class="pmb-nav-tabs">
+                    <button class="pmb-tab-btn active" onclick="switchPmbTab('alur')"><i data-lucide="git-merge"></i> Alur Pendaftaran</button>
+                    <button class="pmb-tab-btn" onclick="switchPmbTab('syarat')"><i data-lucide="file-text"></i> Syarat Berkas</button>
+                    <button class="pmb-tab-btn" onclick="switchPmbTab('biaya')"><i data-lucide="calculator"></i> Rincian Biaya & Kalkulator</button>
                 </div>
-                <div class="sec-card">
-                    <i data-lucide="book-marked"></i>
-                    <h4>Kajian Kitab Kuning</h4>
+
+                <!-- ALUR TAB -->
+                <div id="pmb-tab-alur" class="pmb-tab-content active">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+                        <div style="background: var(--bg-light); padding: 1.25rem; border-radius: var(--radius-md); border-left: 4px solid var(--primary);">
+                            <span style="background: var(--primary); color:white; padding:2px 8px; border-radius:50%; font-weight:bold;">1</span>
+                            <h4 style="font-family:var(--font-heading); margin: 0.5rem 0;">Isi Form Online</h4>
+                            <p style="font-size:0.875rem; color:var(--text-muted);">Isi data calon santri secara lengkap melalui tombol "Daftar PMB".</p>
+                        </div>
+                        <div style="background: var(--bg-light); padding: 1.25rem; border-radius: var(--radius-md); border-left: 4px solid var(--primary);">
+                            <span style="background: var(--primary); color:white; padding:2px 8px; border-radius:50%; font-weight:bold;">2</span>
+                            <h4 style="font-family:var(--font-heading); margin: 0.5rem 0;">Konfirmasi & KARTU</h4>
+                            <p style="font-size:0.875rem; color:var(--text-muted);">Dapatkan ID Pendaftaran unik (misal: AH2026-001) dan cetak bukti daftar.</p>
+                        </div>
+                        <div style="background: var(--bg-light); padding: 1.25rem; border-radius: var(--radius-md); border-left: 4px solid var(--primary);">
+                            <span style="background: var(--primary); color:white; padding:2px 8px; border-radius:50%; font-weight:bold;">3</span>
+                            <h4 style="font-family:var(--font-heading); margin: 0.5rem 0;">Tes Pemetaan</h4>
+                            <p style="font-size:0.875rem; color:var(--text-muted);">Mengikuti tes baca Al-Qur'an, wawasan agama, & tes akademik ringan.</p>
+                        </div>
+                        <div style="background: var(--bg-light); padding: 1.25rem; border-radius: var(--radius-md); border-left: 4px solid var(--primary);">
+                            <span style="background: var(--primary); color:white; padding:2px 8px; border-radius:50%; font-weight:bold;">4</span>
+                            <h4 style="font-family:var(--font-heading); margin: 0.5rem 0;">Daftar Ulang</h4>
+                            <p style="font-size:0.875rem; color:var(--text-muted);">Pembayaran biaya pangkal & penyerahan berkas fisik di sekretariat PMB.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="sec-card">
-                    <i data-lucide="tent"></i>
-                    <h4>Pramuka Pesantren</h4>
+
+                <!-- SYARAT TAB -->
+                <div id="pmb-tab-syarat" class="pmb-tab-content">
+                    <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <li style="display:flex; align-items:center; gap:0.5rem;"><i data-lucide="check" style="color:var(--primary);"></i> Fotocopy Akta Kelahiran (3 Lembar)</li>
+                        <li style="display:flex; align-items:center; gap:0.5rem;"><i data-lucide="check" style="color:var(--primary);"></i> Fotocopy Kartu Keluarga / KK (3 Lembar)</li>
+                        <li style="display:flex; align-items:center; gap:0.5rem;"><i data-lucide="check" style="color:var(--primary);"></i> Pas Foto 3x4 Background Merah (4 Lembar)</li>
+                        <li style="display:flex; align-items:center; gap:0.5rem;"><i data-lucide="check" style="color:var(--primary);"></i> Fotocopy Ijazah / SKL Legalisir (3 Lembar)</li>
+                        <li style="display:flex; align-items:center; gap:0.5rem;"><i data-lucide="check" style="color:var(--primary);"></i> Fotocopy NISN & KIP/PKH (Jika Ada)</li>
+                        <li style="display:flex; align-items:center; gap:0.5rem;"><i data-lucide="check" style="color:var(--primary);"></i> Surat Keterangan Sehat dari Dokter</li>
+                    </ul>
                 </div>
-                <div class="sec-card">
-                    <i data-lucide="pen-tool"></i>
-                    <h4>Seni Kaligrafi Islam</h4>
-                </div>
-                <div class="sec-card">
-                    <i data-lucide="music"></i>
-                    <h4>Seni Hadrah Rebana</h4>
+
+                <!-- BIAYA TAB -->
+                <div id="pmb-tab-biaya" class="pmb-tab-content">
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Rincian Estimasi Biaya Awal Masuk Santri Baru (Putra / Putri):</p>
+                    <table class="fee-table">
+                        <thead>
+                            <tr>
+                                <th>Komponen Biaya</th>
+                                <th>SMP Ainul Hasan</th>
+                                <th>MA Ainul Hasan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Infaq Pembangunan Asrama</td>
+                                <td>Rp 2.500.000</td>
+                                <td>Rp 2.700.000</td>
+                            </tr>
+                            <tr>
+                                <td>Seragam Pesantren & Olahraga (4 Stel)</td>
+                                <td>Rp 850.000</td>
+                                <td>Rp 900.000</td>
+                            </tr>
+                            <tr>
+                                <td>Seragam Wajib Pagar Nusa & Sabuk</td>
+                                <td>Rp 250.000</td>
+                                <td>Rp 250.000</td>
+                            </tr>
+                            <tr>
+                                <td>Paket Kitab Kuning & Buku Panduan</td>
+                                <td>Rp 350.000</td>
+                                <td>Rp 400.000</td>
+                            </tr>
+                            <tr>
+                                <td>SPP Bulanan (Makan 3x, Kasur, Listrik)</td>
+                                <td>Rp 650.000 / bln</td>
+                                <td>Rp 700.000 / bln</td>
+                            </tr>
+                            <tr class="fee-total">
+                                <td>TOTAL ESTIMASI MASUK AWAL</td>
+                                <td>Rp 4.600.000</td>
+                                <td>Rp 4.950.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.8rem; font-style: italic;">* Biaya dapat diangsur selama 3x dalam semester pertama. Beasiswa khusus tersedia untuk Hafiz 30 Juz & Atlet Pagar Nusa Berprestasi.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- PRESTASI SANTRI -->
-    <section class="section-padding" id="prestasi" style="background: #F8FAFC;">
+    <section class="section-padding" id="prestasi" style="background: var(--white);">
         <div class="container">
-            <div class="section-title fade-up">
-                <div class="badge"><i data-lucide="award"></i> KEBANGGAAN PESANTREN</div>
-                <h2>Prestasi <span>Santri</span></h2>
-                <p>Bukti dedikasi santri dalam meraih keunggulan bidang keagamaan, akademik, maupun olahraga.</p>
+            <div class="section-title">
+                <div class="badge"><i data-lucide="trophy"></i> Kebanggaan Pesantren</div>
+                <h2>Prestasi <span>Santri Ainul Hasan</span></h2>
+                <p>Capaian membanggakan para santri di berbagai kompetisi sains, tahfidh, dan pencak silat.</p>
             </div>
 
             <div class="achievement-grid">
-                <div class="achievement-card fade-up">
+                <div class="achievement-card">
                     <div class="trophy-badge"><i data-lucide="trophy"></i></div>
-                    <span class="year">Tahun 2025</span>
-                    <h3>Juara 1 Kejurda Pagar Nusa</h3>
-                    <p>Kategori Tanding Remaja Putra Tingkat Provinsi Jawa Timur.</p>
+                    <span class="year">2025</span>
+                    <h3>Juara 1 Kejurda Pagar Nusa Jawa Timur</h3>
+                    <p>Kategori Tanding Remaja Putra & Seni Tunggal Baku IPSI.</p>
                 </div>
 
-                <div class="achievement-card fade-up">
-                    <div class="trophy-badge"><i data-lucide="medal"></i></div>
-                    <span class="year">Tahun 2025</span>
-                    <h3>Juara 1 Musabaqah Tilawatil Qur'an</h3>
-                    <p>Lomba MTQ Tingkat Kabupaten Kategori 30 Juz.</p>
-                </div>
-
-                <div class="achievement-card fade-up">
+                <div class="achievement-card">
                     <div class="trophy-badge"><i data-lucide="award"></i></div>
-                    <span class="year">Tahun 2024</span>
-                    <h3>Medali Emas Olimpiade Bahasa Arab</h3>
-                    <p>Olimpiade Bahasa Arab Nasional antar Madrasah Aliyah.</p>
+                    <span class="year">2025</span>
+                    <h3>Juara Umum Musabaqah Hifdzil Qur'an (MHQ)</h3>
+                    <p>Tingkat Kabupaten Cabang 10 Juz & 20 Juz Putra-Putri.</p>
                 </div>
 
-                <div class="achievement-card fade-up">
+                <div class="achievement-card">
                     <div class="trophy-badge"><i data-lucide="star"></i></div>
-                    <span class="year">Tahun 2024</span>
-                    <h3>Juara Terbaik Festival Kaligrafi</h3>
-                    <p>Kompetisi Seni Seni Khat Islam Regional Jawa.</p>
+                    <span class="year">2024</span>
+                    <h3>Medali Emas Olimpiade Sains Bahasa Arab</h3>
+                    <p>Penyelenggara Perguruan Tinggi Islam Negeri Se-Jawa.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="trophy-badge"><i data-lucide="check-circle"></i></div>
+                    <span class="year">2024</span>
+                    <h3>Juara 2 Musabaqah Qira'atil Kutub (MQK)</h3>
+                    <p>Lomba Membaca Kitab Fathul Qorib & Imrithi.</p>
                 </div>
             </div>
         </div>
@@ -2071,64 +1997,46 @@
     <!-- FASILITAS PESANTREN -->
     <section class="section-padding" id="fasilitas">
         <div class="container">
-            <div class="section-title fade-up">
-                <div class="badge"><i data-lucide="building"></i> SARANA & PRASARANA</div>
-                <h2>Fasilitas <span>Lengkap</span></h2>
-                <p>Sarana pendukung belajar dan kehidupan santri yang bersih, nyaman, dan memadai.</p>
+            <div class="section-title">
+                <div class="badge"><i data-lucide="building-2"></i> Sarana & Prasarana</div>
+                <h2>Fasilitas <span>Lengkap & Nyaman</span></h2>
+                <p>Mendukung proses belajar, beribadah, serta kehidupan asrama santri secara optimal.</p>
             </div>
 
             <div class="facility-grid">
-                <div class="facility-card fade-up">
-                    <img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=600&q=80" alt="Masjid Utama Pesantren" loading="lazy">
+                <div class="facility-card">
+                    <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=600&q=80" alt="Masjid Utama">
                     <div class="facility-overlay">
                         <i data-lucide="landmark"></i>
                         <h3>Masjid Utama</h3>
-                        <p>Kapasitas 1.500 jamaah untuk shalat & pengajian.</p>
+                        <p>Pusat shalat berjamaah, pengajian kitab, & muraja'ah hafalan.</p>
                     </div>
                 </div>
 
-                <div class="facility-card fade-up">
-                    <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80" alt="Asrama Santri" loading="lazy">
+                <div class="facility-card">
+                    <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=600&q=80" alt="Asrama Santri">
                     <div class="facility-overlay">
                         <i data-lucide="home"></i>
-                        <h3>Asrama Santri</h3>
-                        <p>Kamar tidur rapi, bersih, terpisah putra & putri.</p>
+                        <h3>Asrama Santri Putra & Putri</h3>
+                        <p>Kamar bersih, lemari pribadi, tempat tidur nyaman, & pengawasan 24 jam.</p>
                     </div>
                 </div>
 
-                <div class="facility-card fade-up">
-                    <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=600&q=80" alt="Perpustakaan Digital" loading="lazy">
+                <div class="facility-card">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Padepokan Pagar Nusa">
                     <div class="facility-overlay">
-                        <i data-lucide="book-open-check"></i>
-                        <h3>Perpustakaan</h3>
-                        <p>Koleksi ribuan kitab klasik & buku modern.</p>
+                        <i data-lucide="shield"></i>
+                        <h3>Padepokan Pagar Nusa</h3>
+                        <p>Lapangan khusus latihan fisik, pencak silat, & gelanggang tanding.</p>
                     </div>
                 </div>
 
-                <div class="facility-card fade-up">
-                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="Aula Serbaguna" loading="lazy">
+                <div class="facility-card">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Laboratorium Komputer">
                     <div class="facility-overlay">
-                        <i data-lucide="users"></i>
-                        <h3>Aula Serbaguna</h3>
-                        <p>Tempat wisuda, seminar, dan musyawaroh.</p>
-                    </div>
-                </div>
-
-                <div class="facility-card fade-up">
-                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80" alt="Lapangan Olahraga" loading="lazy">
-                    <div class="facility-overlay">
-                        <i data-lucide="activity"></i>
-                        <h3>Lapangan Olahraga</h3>
-                        <p>Futsal, voli, basket & arena Pagar Nusa.</p>
-                    </div>
-                </div>
-
-                <div class="facility-card fade-up">
-                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80" alt="Pos Kesehatan Klinik Pesantren" loading="lazy">
-                    <div class="facility-overlay">
-                        <i data-lucide="stethoscope"></i>
-                        <h3>Klinik Poskestren</h3>
-                        <p>Layanan kesehatan & pertolongan pertama 24 jam.</p>
+                        <i data-lucide="laptop"></i>
+                        <h3>Lab Komputer & Internet</h3>
+                        <p>Fasilitas komputer modern untuk ujian CBT & pembelajaran IT santri.</p>
                     </div>
                 </div>
             </div>
@@ -2136,275 +2044,119 @@
     </section>
 
     <!-- GALERI KEGIATAN -->
-    <section class="section-padding" id="galeri" style="background: #F1F5F9;">
+    <section class="section-padding" id="galeri" style="background: var(--white);">
         <div class="container">
-            <div class="section-title fade-up">
-                <div class="badge"><i data-lucide="image"></i> DOKUMENTASI KEGIATAN</div>
-                <h2>Galeri <span>Pesantren</span></h2>
-                <p>Momen kebersamaan, belajar, dan rutinitas santri Pondok Pesantren Ainul Hasan.</p>
+            <div class="section-title">
+                <div class="badge"><i data-lucide="image"></i> Dokumentasi Pesantren</div>
+                <h2>Galeri <span>Kegiatan Santri</span></h2>
+                <p>Potret kebersamaan, rutinitas mengaji, latihan bela diri, dan kehidupan sehari-hari santri.</p>
             </div>
 
             <div class="gallery-grid">
-                <div class="gallery-item fade-up" onclick="openLightbox('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1200&q=80', 'Kegiatan Pengajian Kitab Kuning')">
-                    <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=600&q=80" alt="Pengajian Kitab" loading="lazy">
+                <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1200&q=80', 'Pengajian Kitab Kuning Rutin Sore')">
+                    <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=600&q=80" alt="Pengajian Santri">
                     <div class="gallery-overlay">
                         <i data-lucide="maximize-2"></i>
-                        <span>Kajian Kitab Kuning</span>
+                        <span>Pengajian Kitab Kuning</span>
                     </div>
                 </div>
 
-                <div class="gallery-item fade-up" onclick="openLightbox('https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=1200&q=80', 'Latihan Jurus Pagar Nusa Santri')">
-                    <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=600&q=80" alt="Latihan Pagar Nusa" loading="lazy">
+                <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80', 'Latihan Rutin Pencak Silat Pagar Nusa')">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="Latihan Pagar Nusa">
                     <div class="gallery-overlay">
                         <i data-lucide="maximize-2"></i>
                         <span>Latihan Pagar Nusa</span>
                     </div>
                 </div>
 
-                <div class="gallery-item fade-up" onclick="openLightbox('https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=1200&q=80', 'Maret Wisuda Khotmil Qur\'an')">
-                    <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80" alt="Wisuda Tahfidz" loading="lazy">
+                <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80', 'Pembelajaran Formal di Kelas')">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Belajar Formal">
                     <div class="gallery-overlay">
                         <i data-lucide="maximize-2"></i>
-                        <span>Wisuda Khotmil Qur'an</span>
+                        <span>Kelas Formal SMP/MA</span>
                     </div>
                 </div>
 
-                <div class="gallery-item fade-up" onclick="openLightbox('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80', 'Suasana Kelas Pembelajaran Formal')">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Suasana Kelas Formal" loading="lazy">
+                <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80', 'Kegiatan Ekstrakurikuler Reog & Hadrah')">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Hadrah & Seni">
                     <div class="gallery-overlay">
                         <i data-lucide="maximize-2"></i>
-                        <span>Pembelajaran Sekolah Formal</span>
+                        <span>Seni Hadrah & Sholawat</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BERITA & ARTIKEL -->
-    <section class="section-padding" id="berita">
+    <!-- FAQ ACCORDION -->
+    <section class="section-padding">
         <div class="container">
-            <div class="section-title fade-up">
-                <div class="badge"><i data-lucide="newspaper"></i> INFORMASI TERKINI</div>
-                <h2>Berita & <span>Kabar Pesantren</span></h2>
-                <p>Artikel, pengumuman resmi, dan liputan kegiatan terbaru.</p>
-            </div>
-
-            <div class="news-grid">
-                <article class="news-card fade-up">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Penerimaan Santri Baru PPDB" class="news-img" loading="lazy">
-                    <div class="news-body">
-                        <div class="news-meta">
-                            <span><i data-lucide="calendar"></i> 10 Feb 2026</span>
-                            <span><i data-lucide="tag"></i> PPDB</span>
-                        </div>
-                        <h3 class="news-title">Pendaftaran Santri Baru (PPDB) Tahun Ajaran 2026/2027 Resmi Dibuka</h3>
-                        <p class="news-excerpt">Segera daftarkan putra-putri Anda. Kuota penerimaan terbatas untuk gelombang pertama.</p>
-                        <a href="#ppdb" class="news-link">Selengkapnya <i data-lucide="arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <article class="news-card fade-up">
-                    <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=600&q=80" alt="Kejuaraan Pagar Nusa" class="news-img" loading="lazy">
-                    <div class="news-body">
-                        <div class="news-meta">
-                            <span><i data-lucide="calendar"></i> 25 Jan 2026</span>
-                            <span><i data-lucide="tag"></i> Prestasi</span>
-                        </div>
-                        <h3 class="news-title">Santri Ainul Hasan Borong Medali Emas Kejuaraan Silat Pagar Nusa 2025</h3>
-                        <p class="news-excerpt">Tim atlet Pagar Nusa membawa pulang 5 medali emas dan trofi juara umum.</p>
-                        <a href="#pagar-nusa" class="news-link">Selengkapnya <i data-lucide="arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <article class="news-card fade-up">
-                    <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=600&q=80" alt="Wisuda Khotmil Qur'an" class="news-img" loading="lazy">
-                    <div class="news-body">
-                        <div class="news-meta">
-                            <span><i data-lucide="calendar"></i> 12 Des 2025</span>
-                            <span><i data-lucide="tag"></i> Kegiatan</span>
-                        </div>
-                        <h3 class="news-title">Pelaksanaan Wisuda Tahfidz 30 Juz & Khotmil Qur'an Angkatan XX</h3>
-                        <p class="news-excerpt">Sebanyak 45 santri berhasil mengkhatamkan hafalan Al-Qur'an 30 Juz dengan penuh khidmat.</p>
-                        <a href="#galeri" class="news-link">Selengkapnya <i data-lucide="arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- PPDB SECTION -->
-    <section class="section-padding" id="ppdb">
-        <div class="container">
-            <div class="ppdb-box fade-up">
-                <div class="ppdb-grid">
-                    <div class="ppdb-info">
-                        <h3>Penerimaan Santri Baru (PPDB)</h3>
-                        <p>Mari bergabung menjadi bagian dari keluarga besar Pondok Pesantren Ainul Hasan. Dapatkan pendidikan Islam yang berkualitas dan berkarakter.</p>
-                        
-                        <button class="btn btn-gold" onclick="openPPDBModal()">
-                            <i data-lucide="file-text"></i> Isi Form Pendaftaran Online
-                        </button>
-                    </div>
-
-                    <div class="ppdb-steps">
-                        <div class="ppdb-step-item">
-                            <div class="step-number">1</div>
-                            <div class="step-text">
-                                <h4>Pendaftaran Online / Offline</h4>
-                                <p>Isi formulir pendaftaran melalui website resmi ini atau datang langsung ke sekretariat.</p>
-                            </div>
-                        </div>
-
-                        <div class="ppdb-step-item">
-                            <div class="step-number">2</div>
-                            <div class="step-text">
-                                <h4>Verifikasi Berkas</h4>
-                                <p>Penyerahan fotokopi KK, Akta Kelahiran, ijazah terakhir, dan pas foto.</p>
-                            </div>
-                        </div>
-
-                        <div class="ppdb-step-item">
-                            <div class="step-number">3</div>
-                            <div class="step-text">
-                                <h4>Tes Seleksi Masuk</h4>
-                                <p>Tes membaca Al-Qur'an, wawancara calon santri & wali santri.</p>
-                            </div>
-                        </div>
-
-                        <div class="ppdb-step-item">
-                            <div class="step-number">4</div>
-                            <div class="step-text">
-                                <h4>Daftar Ulang & Masuk Asrama</h4>
-                                <p>Penyelesaian administrasi dan orientasi santri baru (Khutbatul Arsy).</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONI SECTION -->
-    <section class="section-padding" id="testimoni" style="background: #F8FAFC;">
-        <div class="container">
-            <div class="section-title fade-up">
-                <div class="badge"><i data-lucide="message-square"></i> KATA MEREKA</div>
-                <h2>Testimoni <span>Wali Santri & Alumni</span></h2>
-                <p>Pengalaman berharga dari keluarga besar Pondok Pesantren Ainul Hasan.</p>
-            </div>
-
-            <div class="testimonial-slider fade-up">
-                <div class="testimonial-track" id="testimonial-track">
-                    <div class="testimonial-card">
-                        <p class="testimonial-quote">"Alhamdulillah, sejak mondok di Ainul Hasan, putra kami tidak hanya hafal 15 Juz Al-Qur'an tetapi juga makin santun, disiplin, dan memiliki pertahanan diri fisik lewat Pagar Nusa."</p>
-                        <div class="testimonial-user">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="H. Ahmad Subagyo" class="user-avatar" loading="lazy">
-                            <div class="user-info">
-                                <h4>H. Ahmad Subagyo</h4>
-                                <p>Wali Santri asal Surabaya</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <p class="testimonial-quote">"Pendidikan formal MTs dan MA Ainul Hasan sangat seimbang dengan porsi pesantrennya. Saya bisa melanjutkan ke PTN favorit sambil tetap menjaga hafalan Al-Qur'an."</p>
-                        <div class="testimonial-user">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Siti Rahmawati" class="user-avatar" loading="lazy">
-                            <div class="user-info">
-                                <h4>Siti Rahmawati, S.Pd</h4>
-                                <p>Alumni Angkatan 2021</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slider-dots" id="slider-dots">
-                    <span class="dot active" onclick="goToSlide(0)"></span>
-                    <span class="dot" onclick="goToSlide(1)"></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="section-padding" id="faq">
-        <div class="container">
-            <div class="section-title fade-up">
-                <div class="badge"><i data-lucide="help-circle"></i> PERTANYAAN UMUM</div>
+            <div class="section-title">
+                <div class="badge"><i data-lucide="help-circle"></i> Tanya Jawab</div>
                 <h2>Pertanyaan <span>Sering Diajukan</span></h2>
-                <p>Informasi cepat mengenai aturan dan sistem pengajaran pesantren.</p>
+                <p>Informasi cepat seputar pendaftaran, aturan asrama, dan kehidupan di Pondok Pesantren Ainul Hasan.</p>
             </div>
 
-            <div class="faq-accordion fade-up">
+            <div class="faq-accordion">
                 <div class="faq-item">
-                    <div class="faq-header" onclick="toggleFAQ(this)">
-                        <span>Kapan pendaftaran santri baru (PPDB) dibuka?</span>
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>Apakah santri boleh membawa HP/smartphone di pesantren?</span>
                         <i data-lucide="chevron-down"></i>
                     </div>
                     <div class="faq-body">
-                        <p>PPDB dibuka dalam 2 gelombang: Gelombang I (Januari - Maret) dan Gelombang II (April - Juni). Pendaftaran bisa dilakukan secara online melalui website ini.</p>
+                        <p>Untuk menjaga fokus hafalan dan ketenangan belajar, santri tidak diperkenankan membawa HP ke asrama. Komunikasi dengan orang tua disediakan jadwal rutin menggunakan telepon pesantren setiap akhir pekan.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-header" onclick="toggleFAQ(this)">
-                        <span>Apakah kegiatan ekstrakurikuler Pagar Nusa wajib bagi santri?</span>
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>Apakah ekstrakurikuler Pagar Nusa wajib bagi semua santri?</span>
                         <i data-lucide="chevron-down"></i>
                     </div>
                     <div class="faq-body">
-                        <p>Ya, Pencak Silat Pagar Nusa merupakan ekstrakurikuler unggulan dan pembentukan karakter fisik-spiritual wajib bagi seluruh santri mukim.</p>
+                        <p>Ya, latihan Pagar Nusa merupakan ekstrakurikuler pembentuk karakter dasar & kebugaran fisik santri. Latihan diadakan 2 kali seminggu secara terpisah untuk putra dan putri.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-header" onclick="toggleFAQ(this)">
-                        <span>Apakah santri diperbolehkan membawa gadget / HP?</span>
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>Bagaimana cara mengecek hasil tes kelulusan PMB online?</span>
                         <i data-lucide="chevron-down"></i>
                     </div>
                     <div class="faq-body">
-                        <p>Untuk menjaga fokus belajar, santri tidak diperkenankan membawa HP pribadi. Komunikasi dengan orang tua difasilitasi melalui pos pengurus asrama pada jadwal kunjungan resmi.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-header" onclick="toggleFAQ(this)">
-                        <span>Bagaimana sistem perizinan pulangnya santri?</span>
-                        <i data-lucide="chevron-down"></i>
-                    </div>
-                    <div class="faq-body">
-                        <p>Perizinan pulang diberikan pada libur semester resmi dan kondisi darurat keluarga dengan persetujuan tertulis dari Pengasuh / Pengurus Pesantren.</p>
+                        <p>Anda dapat mengklik tombol <strong>"Cek Status PMB"</strong> di menu utama website ini, lalu masukkan Nomor Pendaftaran (misal: AH2026-001) atau NISN calon santri.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- KONTAK SECTION -->
-    <section class="section-padding" id="kontak" style="background: #F1F5F9;">
+    <!-- KONTAK & LOKASI -->
+    <section class="section-padding" id="kontak" style="background: var(--white);">
         <div class="container">
-            <div class="section-title fade-up">
-                <div class="badge"><i data-lucide="map-pin"></i> HUBUNGI KAMI</div>
-                <h2>Kontak & <span>Lokasi</span></h2>
-                <p>Silakan hubungi kami untuk informasi pendaftaran, kunjungan, atau pertanyaan lainnya.</p>
+            <div class="section-title">
+                <div class="badge"><i data-lucide="phone-call"></i> Hubungi Kami</div>
+                <h2>Kontak & <span>Lokasi Sekretariat</span></h2>
+                <p>Silakan berkunjung langsung atau hubungi panitia PMB untuk konsultasi pendaftaran.</p>
             </div>
 
             <div class="contact-grid">
-                <div class="contact-info-box fade-left">
-                    <h3>Sekretariat Pesantren</h3>
+                <div class="contact-info-box">
+                    <h3>Sekretariat Pondok Pesantren Ainul Hasan</h3>
                     <div class="contact-list">
                         <div class="contact-item">
                             <div class="contact-item-icon"><i data-lucide="map-pin"></i></div>
                             <div class="contact-item-text">
                                 <h4>Alamat Lengkap</h4>
-                                <p>Jl. Pesantren Ainul Hasan No. 45, Kecamatan Pesantren, Jawa Timur</p>
+                                <p>Jl. Raya Pesantren Ainul Hasan No. 45, Kebonagung, Jawa Timur 65183</p>
                             </div>
                         </div>
 
                         <div class="contact-item">
                             <div class="contact-item-icon"><i data-lucide="phone"></i></div>
                             <div class="contact-item-text">
-                                <h4>Telepon / WhatsApp</h4>
-                                <p>+62 812-3456-7890 (Humas PPDB)</p>
+                                <h4>WhatsApp Hotline PMB</h4>
+                                <p>+62 812-3456-7890 / +62 857-9988-7766</p>
                             </div>
                         </div>
 
@@ -2412,47 +2164,33 @@
                             <div class="contact-item-icon"><i data-lucide="mail"></i></div>
                             <div class="contact-item-text">
                                 <h4>Email Resmi</h4>
-                                <p>info@ainulhasan.ponpes.id</p>
+                                <p>pmb@ainulhasan.sch.id / info@ainulhasan.sch.id</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="map-wrapper">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.1234567890!2d112.6321!3d-7.9812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTgnNTIuMyJTIDExMsKwMzcnNTUuNiJF!5e0!3m2!1sid!2sid!4v1600000000000" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126438.33806378213!2d112.561741!3d-7.978469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTgnNDIuNSJTIDExMsKwNDMnNDIuMyJF!5e0!3m2!1sid!2sid!4v1625000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
 
-                <div class="contact-form-box fade-right">
-                    <h3>Kirim Pesan</h3>
-                    <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                <div class="contact-form-box">
+                    <h3>Kirim Pesan / Pertanyaan</h3>
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)">
                         <div class="form-group">
-                            <label for="name">Nama Lengkap</label>
-                            <input type="text" id="name" class="form-control" placeholder="Masukkan nama Anda" required>
+                            <label>Nama Lengkap Anda</label>
+                            <input type="text" class="form-control" placeholder="Contoh: Bpk. Ahmad Subagyo" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="phone">Nomor WhatsApp</label>
-                            <input type="tel" id="phone" class="form-control" placeholder="08123456789" required>
+                            <label>Nomor WhatsApp</label>
+                            <input type="tel" class="form-control" placeholder="Contoh: 081234567890" required>
                         </div>
-
                         <div class="form-group">
-                            <label for="subject">Subjek / Keperluan</label>
-                            <select id="subject" class="form-control" required>
-                                <option value="">Pilih Subjek</option>
-                                <option value="PPDB">Informasi PPDB</option>
-                                <option value="Pagar Nusa">Pencak Silat Pagar Nusa</option>
-                                <option value="Kunjungan">Jadwal Kunjungan</option>
-                                <option value="Lainnya">Lainnya</option>
-                            </select>
+                            <label>Pesan / Keperluan</label>
+                            <textarea class="form-control" placeholder="Tuliskan pertanyaan seputar pendaftaran atau kunjungan..." required></textarea>
                         </div>
-
-                        <div class="form-group">
-                            <label for="message">Pesan Anda</label>
-                            <textarea id="message" class="form-control" placeholder="Tuliskan pertanyaan Anda..." required></textarea>
-                        </div>
-
                         <button type="submit" class="btn btn-primary" style="width: 100%;">
-                            <i data-lucide="send"></i> Kirim Pesan Sekarang
+                            <i data-lucide="send"></i> Kirim Pesan Ke Panitia
                         </button>
                     </form>
                 </div>
@@ -2465,53 +2203,58 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="#beranda" class="logo">
-                        <div class="logo-icon"><i data-lucide="book-open"></i></div>
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i data-lucide="book-open"></i>
+                        </div>
                         <div class="logo-text">
-                            <h1 style="color: var(--white);">AINUL HASAN</h1>
+                            <!-- FIXED TYPO: "AINUL HASAN" -->
+                            <h1 style="color:var(--white);">AINUL HASAN</h1>
                             <span>PONDOK PESANTREN</span>
                         </div>
-                    </a>
-                    <p>Mencetak Generasi Qur'ani, Berakhlak Mulia, dan Berprestasi yang siap mengabdi untuk agama, masyarakat, dan Negara Kesatuan Republik Indonesia.</p>
+                    </div>
+                    <p>Mencetak generasi penerus bangsa yang unggul dalam hafalan Al-Qur'an, paham kitab kuning, berprestasi formal, serta tangguh berakhlak mulia.</p>
                     <div class="social-links">
-                        <a href="#" class="social-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-                        <a href="#" class="social-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                        <a href="#" class="social-btn" aria-label="YouTube"><i data-lucide="youtube"></i></a>
-                        <a href="#" class="social-btn" aria-label="WhatsApp"><i data-lucide="phone"></i></a>
+                        <a href="#" class="social-btn" title="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="social-btn" title="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="social-btn" title="YouTube"><i data-lucide="youtube"></i></a>
+                        <a href="#" class="social-btn" title="WhatsApp"><i data-lucide="message-circle"></i></a>
                     </div>
                 </div>
 
                 <div>
                     <h4 class="footer-title">Navigasi Cepat</h4>
                     <ul class="footer-links">
-                        <li><a href="#beranda">Beranda</a></li>
-                        <li><a href="#profil">Profil Pondok</a></li>
+                        <li><a href="#profil">Profil Pesantren</a></li>
                         <li><a href="#program">Program Pendidikan</a></li>
-                        <li><a href="#pagar-nusa">Pagar Nusa</a></li>
-                        <li><a href="#fasilitas">Fasilitas</a></li>
+                        <li><a href="#pagar-nusa">Pencak Silat Pagar Nusa</a></li>
+                        <li><a href="#fasilitas">Fasilitas Asrama</a></li>
+                        <li><a href="#galeri">Dokumentasi Santri</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="footer-title">Informasi</h4>
+                    <h4 class="footer-title">Portal PMB</h4>
                     <ul class="footer-links">
-                        <li><a href="#ppdb">PPDB Online</a></li>
-                        <li><a href="#berita">Berita Terbaru</a></li>
-                        <li><a href="#galeri">Galeri Foto</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#kontak">Kontak Kami</a></li>
+                        <li><a href="javascript:void(0)" onclick="openPmbModal()">Formulir PMB Online</a></li>
+                        <li><a href="javascript:void(0)" onclick="openStatusModal()">Cek Status Pendaftaran</a></li>
+                        <li><a href="#pmb">Syarat & Alur Masuk</a></li>
+                        <li><a href="#pmb">Rincian Biaya Santri</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="footer-title">Jam Layanan Sekretariat</h4>
-                    <p style="color: rgba(255,255,255,0.7); font-size:0.9rem; margin-bottom: 0.5rem;"><strong>Sabtu - Kamis:</strong> 08.00 - 16.00 WIB</p>
-                    <p style="color: rgba(255,255,255,0.7); font-size:0.9rem;"><strong>Jumat:</strong> Libur Layanan</p>
+                    <h4 class="footer-title">Jam Operasional</h4>
+                    <p style="font-size:0.875rem; color:rgba(255,255,255,0.8); line-height:1.7;">
+                        <strong>Kantor Sekretariat:</strong><br>
+                        Senin - Sabtu: 08.00 - 16.00 WIB<br>
+                        Minggu / Hari Libur: Kunjungan Wali Santri (09.00 - 15.00 WIB)
+                    </p>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Pondok Pesantren Ainul Hasan. All Rights Reserved. Designed with Excellence.</p>
+                <p>&copy; 2026 Pondok Pesantren Ainul Hasan. Seluruh Hak Cipta Dilindungi Undang-Undang.</p>
             </div>
         </div>
     </footer>
@@ -2521,259 +2264,223 @@
         <i data-lucide="arrow-up"></i>
     </div>
 
-    <!-- LIGHTBOX MODAL -->
-    <div class="lightbox-modal" id="lightboxModal">
-        <div class="lightbox-content">
-            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-            <img src="" id="lightboxImg" class="lightbox-img" alt="Lightbox View">
-            <div id="lightboxCaption" class="lightbox-caption"></div>
-        </div>
-    </div>
-
-    <!-- PAGAR NUSA DETAIL MODAL -->
-    <div class="modal" id="pagarNusaModal">
+    <!-- MODAL FORMULIR PENDAFTARAN PMB ONLINE -->
+    <div class="modal" id="pmbModal">
         <div class="modal-card">
-            <button class="modal-close" onclick="closePagarNusaModal()">&times;</button>
-            <h3 style="font-family: var(--font-heading); color: var(--primary-dark); margin-bottom: 1rem;">🥋 Detail Pagar Nusa Ainul Hasan</h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">Pencak Silat Nahdlatul Ulama Pagar Nusa di Pondok Pesantren Ainul Hasan berasas Pancasila dan berhaluan Islam Ahlussunnah wal Jama'ah. Latihan rutin melatih kedisiplinan, jurus baku, ketahanan fisik, dan keotentikan seni silat tradisional.</p>
-            <ul style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
-                <li>✔️ <strong>Jadwal Latihan:</strong> Selasa & Jumat Sore (15.30 WIB - Selesai)</li>
-                <li>✔️ <strong>Lokasi:</strong> Lapangan Olahraga / Hall Utama Pesantren</li>
-                <li>✔️ <strong>Perlengkapan:</strong> Seragam Sakral Pagar Nusa Resmi & Sabuk</li>
-            </ul>
-            <button class="btn btn-primary" onclick="closePagarNusaModal()">Tutup Informasi</button>
-        </div>
-    </div>
+            <button class="modal-close" onclick="closePmbModal()"><i data-lucide="x"></i></button>
+            <div class="modal-header">
+                <h3><i data-lucide="user-plus" style="color:var(--primary); display:inline;"></i> Formulir PMB Online 2026/2027</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Pondok Pesantren Ainul Hasan Kebonagung</p>
+            </div>
 
-    <!-- PPDB ONLINE FORM MODAL -->
-    <div class="modal" id="ppdbModal">
-        <div class="modal-card">
-            <button class="modal-close" onclick="closePPDBModal()">&times;</button>
-            <h3 style="font-family: var(--font-heading); color: var(--primary-dark); margin-bottom: 0.5rem;">📋 Form Pendaftaran PPDB Online</h3>
-            <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;">Silakan isi formulir awal calon santri baru di bawah ini:</p>
-            <form onsubmit="handlePPDBSubmit(event)">
-                <div class="form-group">
-                    <label>Nama Lengkap Calon Santri</label>
-                    <input type="text" class="form-control" placeholder="Nama Lengkap" required>
+            <form id="pmbForm" onsubmit="handlePmbSubmit(event)">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label>Nama Lengkap Calon Santri *</label>
+                        <input type="text" id="pmbNama" class="form-control" placeholder="Nama sesuai Ijazah/AKTA" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>NISN (Nomor Induk Siswa Nasional) *</label>
+                        <input type="number" id="pmbNisn" class="form-control" placeholder="10 digit NISN" required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Pilihan Jenjang Education</label>
-                    <select class="form-control" required>
-                        <option value="">Pilih Jenjang</option>
-                        <option value="MTs">Madrasah Tsanawiyah (MTs)</option>
-                        <option value="MA">Madrasah Aliyah (MA)</option>
-                        <option value="Tahfidz Only">Program Murni Tahfidz</option>
-                    </select>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label>Jenis Kelamin *</label>
+                        <select id="pmbGender" class="form-control" required>
+                            <option value="">-- Pilih Jenis Kelamin --</option>
+                            <option value="Laki-laki (Putra)">Laki-laki (Putra)</option>
+                            <option value="Perempuan (Putri)">Perempuan (Putri)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pilihan Jenjang Pendidikan *</label>
+                        <select id="pmbJenjang" class="form-control" required>
+                            <option value="">-- Pilih Jenjang --</option>
+                            <option value="SMP Ainul Hasan + Asrama">SMP Ainul Hasan + Asrama</option>
+                            <option value="MA Ainul Hasan + Asrama">MA Ainul Hasan + Asrama</option>
+                            <option value="Program Khusus Tahfidh 30 Juz">Program Khusus Tahfidh 30 Juz</option>
+                            <option value="Madrasah Diniyah Murni">Madrasah Diniyah Murni</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Nomor WhatsApp Orang Tua / Wali</label>
-                    <input type="tel" class="form-control" placeholder="08xxxxxxxxxx" required>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label>Jalur Pendaftaran *</label>
+                        <select id="pmbJalur" class="form-control" required>
+                            <option value="Reguler">Jalur Reguler</option>
+                            <option value="Beasiswa Tahfidh Qur'an">Beasiswa Tahfidh Al-Qur'an</option>
+                            <option value="Beasiswa Prestasi Pagar Nusa">Beasiswa Prestasi Pagar Nusa</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nomor WhatsApp Orang Tua/Wali *</label>
+                        <input type="tel" id="pmbHp" class="form-control" placeholder="08xxxxxxxxxx" required>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-gold" style="width: 100%;">Daftar Sekarang</button>
+
+                <div class="form-group">
+                    <label>Nama Orang Tua / Wali *</label>
+                    <input type="text" id="pmbWali" class="form-control" placeholder="Nama Ayah/Ibu/Wali" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Alamat Asal / Tempat Tinggal *</label>
+                    <textarea id="pmbAlamat" class="form-control" style="min-height:70px;" placeholder="Dusun, Desa, Kecamatan, Kabupaten/Kota" required></textarea>
+                </div>
+
+                <div style="background: var(--primary-tint); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem; font-size: 0.85rem; color: var(--primary-dark);">
+                    <i data-lucide="info" style="width:16px; display:inline;"></i> Dengan mengirim form ini, Anda menyetujui pengisian data yang sebenar-benarnya untuk pendaftaran santri baru.
+                </div>
+
+                <button type="submit" class="btn btn-gold" style="width: 100%;">
+                    <i data-lucide="check-circle"></i> Kirim Pendaftaran PMB
+                </button>
             </form>
         </div>
     </div>
 
+    <!-- MODAL CEK STATUS PENDAFTARAN -->
+    <div class="modal" id="statusModal">
+        <div class="modal-card" style="max-width: 550px;">
+            <button class="modal-close" onclick="closeStatusModal()"><i data-lucide="x"></i></button>
+            <div class="modal-header">
+                <h3><i data-lucide="search" style="color:var(--primary); display:inline;"></i> Cek Status Pendaftaran PMB</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Masukkan ID Pendaftaran (misal: AH2026-001) atau NISN santri</p>
+            </div>
+
+            <div class="form-group">
+                <label>Nomor Pendaftaran / NISN</label>
+                <input type="text" id="statusSearchInput" class="form-control" placeholder="Contoh: AH2026-001 atau 0081234567">
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="performStatusCheck()" style="width: 100%; margin-bottom: 1.5rem;">
+                Cari Data Pendaftaran
+            </button>
+
+            <!-- RESULT CONTAINER -->
+            <div id="statusResult" style="display: none; background: var(--bg-light); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem;">
+                <!-- DYNAMIC CONTENT POPULATED BY JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DETAIL PAGAR NUSA -->
+    <div class="modal" id="pagarNusaModal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closePagarNusaInfo()"><i data-lucide="x"></i></button>
+            <div class="modal-header">
+                <h3>🥋 Ekstrakurikuler Pagar Nusa NU Ainul Hasan</h3>
+            </div>
+            <div style="line-height: 1.7; font-size: 0.95rem; color: var(--text-dark);">
+                <p><strong>Pencak Silat Nahdlatul Ulama Pagar Nusa</strong> merupakan badan otonom NU yang bertugas melestarikan seni bela diri tradisional Indonesia sekaligus menjaga pertahanan para Ulama dan Negara Kesatuan Republik Indonesia (NKRI).</p>
+                <br>
+                <h4 style="color:var(--primary-dark);">Jadwal & Kurikulum Latihan:</h4>
+                <ul style="list-style:disc; margin-left:1.5rem; margin-top:0.5rem; margin-bottom:1rem;">
+                    <li><strong>Hari Latihan:</strong> Selasa Malam & Sabtu Sore (Putra/Putri terpisah)</li>
+                    <li><strong>Materi:</strong> Jurus Baku IPSI, Jurus Khas Pagar Nusa, Pernafasan, & Seni Ganda</li>
+                    <li><strong>Kejuaraan:</strong> Pengiriman kontingen berkala ke Kejurda, Kejurnas, & O2SN</li>
+                </ul>
+                <p>Seluruh santri Pondok Pesantren Ainul Hasan akan dibekali sabuk resmi serta sertifikat keanggotaan Pagar Nusa.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- TOAST NOTIFICATION -->
-    <div class="toast" id="toast">Pesan berhasil dikirim!</div>
+    <div class="toast" id="toast">
+        <i data-lucide="check-circle-2" style="color:var(--gold);"></i>
+        <span id="toastMsg">Pesan Toast</span>
+    </div>
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
-        // Initialize Lucide Icons
-        document.addEventListener("DOMContentLoaded", () => {
-            lucide.createIcons();
-        });
+        // Data Registrasi Lokal Mocking & Dynamic Storage
+        const registeredSantri = [
+            { id: "AH2026-001", nisn: "0081234567", nama: "Ahmad Rizky Pratama", jenjang: "MA Ainul Hasan + Asrama", status: "DITERIMA", tgl: "10 Jan 2026" },
+            { id: "AH2026-002", nisn: "0098765432", nama: "Siti Nur Aisyah", jenjang: "SMP Ainul Hasan + Asrama", status: "MENUNGGU TES", tgl: "14 Jan 2026" }
+        ];
 
-        // Hide Preloader when Window is Loaded
-        window.addEventListener("load", () => {
-            const preloader = document.getElementById("preloader");
-            if (preloader) {
-                preloader.classList.add("loaded");
+        // WINDOW ONLOAD
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            preloader.classList.add('loaded');
+            
+            // Initialize Lucide Icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
             }
         });
 
-        // Navbar Scroll transformation
-        const header = document.getElementById("navbar");
-        const backToTopBtn = document.getElementById("backToTop");
+        // NAVBAR SCROLL EFFECT
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('backToTop');
 
-        window.addEventListener("scroll", () => {
+        window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                header.classList.add("scrolled");
+                navbar.classList.add('scrolled');
             } else {
-                header.classList.remove("scrolled");
+                navbar.classList.remove('scrolled');
             }
 
             if (window.scrollY > 400) {
-                backToTopBtn.classList.add("active");
+                backToTop.classList.add('active');
             } else {
-                backToTopBtn.classList.remove("active");
+                backToTop.classList.remove('active');
             }
         });
 
-        // Mobile Navigation Drawer Toggle
-        const hamburger = document.getElementById("hamburger");
-        const navMenu = document.getElementById("nav-menu");
+        // HAMBURGER MENU TOGGLE
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
 
-        hamburger.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
         });
 
-        // Close Mobile Menu when clicking a nav link
-        document.querySelectorAll(".nav-link").forEach(link => {
-            link.addEventListener("click", () => {
-                navMenu.classList.remove("active");
-            });
-        });
-
-        // ScrollSpy Active Link Update
-        const sections = document.querySelectorAll("section[id]");
-        window.addEventListener("scroll", () => {
-            const scrollY = window.pageYOffset;
-
-            sections.forEach(current => {
-                const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - 100;
-                const sectionId = current.getAttribute("id");
-                const navLink = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
-
-                if (navLink) {
-                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                        navLink.classList.add("active");
-                    } else {
-                        navLink.classList.remove("active");
-                    }
-                }
+        // Close nav menu when clicking any link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
             });
         });
 
-        // Counter Animation using IntersectionObserver
-        const counters = document.querySelectorAll(".counter");
-        let counterAnimated = false;
+        // TAB PROFIL PESANTREN
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
 
-        const animateCounters = () => {
-            counters.forEach(counter => {
-                const target = +counter.getAttribute("data-target");
-                const speed = 200;
-                const updateCount = () => {
-                    const count = +counter.innerText;
-                    const inc = Math.ceil(target / speed);
-                    if (count < target) {
-                        counter.innerText = count + inc;
-                        setTimeout(updateCount, 25);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                updateCount();
-            });
-        };
-
-        const heroStatsSection = document.querySelector(".hero-stats");
-        if (heroStatsSection) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !counterAnimated) {
-                        animateCounters();
-                        counterAnimated = true;
-                    }
-                });
-            }, { threshold: 0.5 });
-            observer.observe(heroStatsSection);
+            event.currentTarget.classList.add('active');
+            document.getElementById('tab-' + tabName).classList.add('active');
         }
 
-        // About Section Tabs
-        function openTab(evt, tabName) {
-            const tabContents = document.querySelectorAll(".tab-content");
-            tabContents.forEach(content => content.classList.remove("active"));
+        // TAB PMB SECTION
+        function switchPmbTab(tabName) {
+            document.querySelectorAll('.pmb-tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.pmb-tab-content').forEach(content => content.classList.remove('active'));
 
-            const tabBtns = document.querySelectorAll(".tab-btn");
-            tabBtns.forEach(btn => btn.classList.remove("active"));
-
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
+            event.currentTarget.classList.add('active');
+            document.getElementById('pmb-tab-' + tabName).classList.add('active');
         }
 
-        // Testimonial Slider JS
-        let currentSlide = 0;
-        const track = document.getElementById("testimonial-track");
-        const dots = document.querySelectorAll("#slider-dots .dot");
-
-        function goToSlide(slideIndex) {
-            currentSlide = slideIndex;
-            if (track) {
-                track.style.transform = `translateX(-${currentSlide * 100}%)`;
-            }
-            dots.forEach((dot, idx) => {
-                dot.classList.toggle("active", idx === currentSlide);
-            });
-        }
-
-        setInterval(() => {
-            if (dots.length > 0) {
-                currentSlide = (currentSlide + 1) % dots.length;
-                goToSlide(currentSlide);
-            }
-        }, 5000);
-
-        // FAQ Accordion Toggle
-        function toggleFAQ(element) {
-            const item = element.parentElement;
-            item.classList.toggle("active");
-        }
-
-        // Lightbox Functions
-        function openLightbox(imgSrc, caption) {
-            const modal = document.getElementById("lightboxModal");
-            const img = document.getElementById("lightboxImg");
-            const cap = document.getElementById("lightboxCaption");
+        // FAQ ACCORDION
+        function toggleFaq(headerEl) {
+            const faqItem = headerEl.parentElement;
+            const isActive = faqItem.classList.contains('active');
             
-            img.src = imgSrc;
-            cap.innerText = caption;
-            modal.classList.add("active");
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
         }
 
-        function closeLightbox() {
-            document.getElementById("lightboxModal").classList.remove("active");
-        }
-
-        // Modal Handlers (Pagar Nusa & PPDB)
-        function openPagarNusaModal() {
-            document.getElementById("pagarNusaModal").classList.add("active");
-        }
-        function closePagarNusaModal() {
-            document.getElementById("pagarNusaModal").classList.remove("active");
-        }
-
-        function openPPDBModal() {
-            document.getElementById("ppdbModal").classList.add("active");
-        }
-        function closePPDBModal() {
-            document.getElementById("ppdbModal").classList.remove("active");
-        }
-
-        // Form Submit Simulation with Toast Notification
-        function showToast(message) {
-            const toast = document.getElementById("toast");
-            toast.innerText = message;
-            toast.classList.add("show");
-            setTimeout(() => {
-                toast.classList.remove("show");
-            }, 3500);
-        }
-
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            showToast("Pesan Anda telah berhasil terkirim!");
-            e.target.reset();
-        }
-
-        function handlePPDBSubmit(e) {
-            e.preventDefault();
-            closePPDBModal();
-            showToast("Pendaftaran PPDB Berhasil! Tim admin kami akan segera menghubungi WhatsApp Anda.");
-            e.target.reset();
-        }
-
+        // SCROLL TO TOP
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
@@ -2781,35 +2488,154 @@
             });
         }
 
-        // Scroll Animation Observer (Fade-up, Fade-left, etc.)
-        const animatedElements = document.querySelectorAll(".fade-up, .fade-left, .fade-right, .zoom-in");
-        const scrollObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("appear");
-                }
+        // MODAL PMB HANDLERS
+        function openPmbModal() {
+            document.getElementById('pmbModal').classList.add('active');
+        }
+
+        function closePmbModal() {
+            document.getElementById('pmbModal').classList.remove('active');
+        }
+
+        // MODAL STATUS HANDLERS
+        function openStatusModal() {
+            document.getElementById('statusModal').classList.add('active');
+            document.getElementById('statusResult').style.display = 'none';
+        }
+
+        function closeStatusModal() {
+            document.getElementById('statusModal').classList.remove('active');
+        }
+
+        // MODAL PAGAR NUSA HANDLERS
+        function openPagarNusaInfo() {
+            document.getElementById('pagarNusaModal').classList.add('active');
+        }
+
+        function closePagarNusaInfo() {
+            document.getElementById('pagarNusaModal').classList.remove('active');
+        }
+
+        // LIGHTBOX HANDLER
+        function openLightbox(imgSrc, captionText) {
+            // Check if lightbox modal exists, create if not
+            let lightbox = document.getElementById('lightboxModal');
+            if (!lightbox) {
+                lightbox = document.createElement('div');
+                lightbox.id = 'lightboxModal';
+                lightbox.className = 'lightbox-modal';
+                lightbox.innerHTML = `
+                    <div class="lightbox-content">
+                        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+                        <img src="" id="lightboxImg" class="lightbox-img" alt="Gallery preview">
+                        <div id="lightboxCaption" class="lightbox-caption"></div>
+                    </div>
+                `;
+                document.body.appendChild(lightbox);
+            }
+
+            document.getElementById('lightboxImg').src = imgSrc;
+            document.getElementById('lightboxCaption').innerText = captionText;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightboxModal');
+            if (lightbox) {
+                lightbox.classList.remove('active');
+            }
+        }
+
+        // SUBMIT PMB FORM
+        function handlePmbSubmit(e) {
+            e.preventDefault();
+
+            const nama = document.getElementById('pmbNama').value;
+            const nisn = document.getElementById('pmbNisn').value;
+            const jenjang = document.getElementById('pmbJenjang').value;
+            
+            // Generate Random Registration ID
+            const randomNum = Math.floor(100 + Math.random() * 900);
+            const newId = `AH2026-${randomNum}`;
+
+            // Push to local array
+            registeredSantri.push({
+                id: newId,
+                nisn: nisn,
+                nama: nama,
+                jenjang: jenjang,
+                status: "VERIFIKASI BERKAS",
+                tgl: "Hari Ini"
             });
-        }, { threshold: 0.15 });
 
-        animatedElements.forEach(el => scrollObserver.observe(el));
+            closePmbModal();
 
-        // Button Click Ripple Effect
-        document.querySelectorAll('.btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                const x = e.clientX - e.target.getBoundingClientRect().left;
-                const y = e.clientY - e.target.getBoundingClientRect().top;
+            // Reset Form
+            document.getElementById('pmbForm').reset();
 
-                const ripples = document.createElement('span');
-                ripples.className = 'ripple';
-                ripples.style.left = x + 'px';
-                ripples.style.top = y + 'px';
-                this.appendChild(ripples);
+            // Show Toast
+            showToast(`Pendaftaran Berhasil! ID Anda: ${newId}. Simpan ID untuk cek status.`);
+        }
 
-                setTimeout(() => {
-                    ripples.remove();
-                }, 600);
-            });
-        });
+        // PERFORM STATUS CHECK
+        function performStatusCheck() {
+            const query = document.getElementById('statusSearchInput').value.trim().toLowerCase();
+            const resultBox = document.getElementById('statusResult');
+
+            if (!query) {
+                showToast("Silakan masukkan ID Pendaftaran atau NISN terlebih dahulu!");
+                return;
+            }
+
+            const found = registeredSantri.find(s => s.id.toLowerCase() === query || s.nisn.toLowerCase() === query);
+
+            resultBox.style.display = 'block';
+
+            if (found) {
+                let badgeColor = "#D97706";
+                if (found.status === "DITERIMA") badgeColor = "#059669";
+                if (found.status === "DITOLAK") badgeColor = "#DC2626";
+
+                resultBox.innerHTML = `
+                    <div style="display:flex; justify-size:space-between; align-items:center; margin-bottom:0.75rem;">
+                        <h4 style="font-family:var(--font-heading); color:var(--primary-dark);">${found.nama}</h4>
+                        <span style="background:${badgeColor}; color:white; padding:2px 8px; border-radius:12px; font-size:0.75rem; font-weight:bold;">${found.status}</span>
+                    </div>
+                    <p style="font-size:0.85rem; margin-bottom:0.4rem;"><strong>ID Pendaftaran:</strong> ${found.id}</p>
+                    <p style="font-size:0.85rem; margin-bottom:0.4rem;"><strong>NISN:</strong> ${found.nisn}</p>
+                    <p style="font-size:0.85rem; margin-bottom:0.4rem;"><strong>Jenjang Pilihan:</strong> ${found.jenjang}</p>
+                    <p style="font-size:0.85rem; color:var(--text-muted);">Tanggal Pendaftaran: ${found.tgl}</p>
+                `;
+            } else {
+                resultBox.innerHTML = `
+                    <p style="color: #DC2626; font-size: 0.9rem; text-align: center;">
+                        <i data-lucide="alert-circle"></i> Data pendaftaran tidak ditemukan. Pastikan ID atau NISN yang Anda masukkan benar.
+                    </p>
+                `;
+            }
+
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
+
+        // HANDLE CONTACT FORM
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            e.target.reset();
+            showToast("Pesan Anda telah berhasil terkirim ke Panitia Pesantren!");
+        }
+
+        // SHOW TOAST UTILITY
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = message;
+            toast.classList.add('show');
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 4000);
+        }
     </script>
 </body>
 </html>
